@@ -1,6 +1,6 @@
 <p align="center">
 
-  <h1 align="center">MoRAG - Retrieval Augmented Generation for Human Motion</h1>
+  <h1 align="center">MoRAG - Multi-Fusion Retrieval Augmented Generation for Human Motion</h1>
   <p align="center">
     <a href="https://www.linkedin.com/in/sai-shashank-54288219b"><strong>Sai Shashank Kalakonda</strong></a>
     ·
@@ -20,7 +20,7 @@
 <p align="center">
   <br>
     <a href="https://pytorch.org/get-started/locally/"><img alt="PyTorch" src="https://img.shields.io/badge/PyTorch-ee4c2c?logo=pytorch&logoColor=white"></a>
-    <a href=''>
+    <a href='http://arxiv.org/abs/2409.12140'>
       <img src='https://img.shields.io/badge/Paper-PDF-green?style=flat&logo=arXiv&logoColor=green' alt='Paper PDF'>
     </a>
     <a href='https://motion-rag.github.io/' style='padding-left: 0.5rem;'>
