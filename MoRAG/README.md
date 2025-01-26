@@ -157,7 +157,7 @@ All the pretrained models for each MoRAG_[part], along with the encoded dataset 
 
 As spatial composition relies on part-specific retrieved sequences, rotation and translation data are required. For this, we use AMASS data. Follow the instructions in [AMASS data setup](https://github.com/atnikos/teach?tab=readme-ov-file#data) to set up the AMASS dataset. Once processing is complete, copy the `amass.pth.tar` file into the `amass_data` folder, which will be accessed during MoRAG retrieval.
 
-Download smplh body models into the folder `rots_to_smpl_conversion`, refer this [link](https://download.is.tue.mpg.de/download.php?domain=mano&resume=1&sfile=smplh.tar.xz)] for download.
+Download smplh body models into the folder `rots_to_smpl_conversion`, refer this [link](https://download.is.tue.mpg.de/download.php?domain=mano&resume=1&sfile=smplh.tar.xz) for download.
 
 Ensure the following variables are correctly set in `morag_retrieval.py`:
 - **OpenAI API key** (`openai_api_key`)
