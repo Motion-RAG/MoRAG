@@ -1,0 +1,9 @@
+[06/11/23 00:53:09][__main__][INFO] - Compute token embeddings for distilbert-base-uncased
+[06/11/23 00:59:53][__main__][INFO] - Compute token embeddings for distilbert-base-uncased
+[06/11/23 01:01:33][__main__][INFO] - Compute sentence embeddings for sentence-transformers/all-mpnet-base-v2
+[21/11/23 23:42:47][__main__][INFO] - Compute token embeddings for distilbert-base-uncased
+[21/11/23 23:44:19][__main__][INFO] - Compute sentence embeddings for sentence-transformers/all-mpnet-base-v2
+[09/01/24 00:47:58][__main__][INFO] - Compute token embeddings for distilbert-base-uncased
+[09/01/24 00:48:53][__main__][INFO] - Compute sentence embeddings for sentence-transformers/all-mpnet-base-v2
+[09/01/24 02:21:06][__main__][INFO] - Compute token embeddings for distilbert-base-uncased
+[09/01/24 02:21:59][__main__][INFO] - Compute sentence embeddings for sentence-transformers/all-mpnet-base-v2

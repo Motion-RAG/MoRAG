@@ -1,0 +1,27 @@
+data:
+  motion_loader:
+    _target_: src.data.motion.AMASSMotionLoader
+    base_dir: /ssd_scratch/cvit/sai.shashank/datasets/motions/guoh3dfeats
+    normalizer:
+      _target_: src.data.motion.Normalizer
+      base_dir: stats/${hydra:runtime.choices.data}/${hydra:runtime.choices.data/motion_loader}
+      eps: 1.0e-12
+    fps: 20.0
+    nfeats: 263
+  _target_: src.data.text_motion.TextMotionDataset
+  path: /ssd_scratch/cvit/sai.shashank/datasets/annotations/${hydra:runtime.choices.data}
+  text_to_token_emb:
+    _target_: src.data.text.TokenEmbeddings
+    path: /ssd_scratch/cvit/sai.shashank/datasets/annotations/${hydra:runtime.choices.data}
+    modelname: distilbert-base-uncased
+    preload: true
+  text_to_sent_emb:
+    _target_: src.data.text.SentenceEmbeddings
+    path: /ssd_scratch/cvit/sai.shashank/datasets/annotations/${hydra:runtime.choices.data}
+    modelname: sentence-transformers/all-mpnet-base-v2
+    preload: true
+  preload: true
+run_dir: logs
+seed: 1234
+logger_level: INFO
+device: cuda
