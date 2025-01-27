@@ -244,18 +244,17 @@ def merge(torso_datas, hands_datas, legs_datas, text):
 		hands_data = amass_data[amass_name_idx_map[hands_fname]]
 		legs_data = amass_data[amass_name_idx_map[legs_fname]]
 
-		torso_frames = len(torso_data['poses'])
-		hands_frames = len(hands_data['poses'])
-		legs_frames = len(legs_data['poses'])
-		frames = min([torso_frames,hands_frames,legs_frames])
-		frames = np.arange(0,frames)
+		torso_frames = np.arange(int(torso_data['fps']*torso_datas[rank]['start']),int(torso_data['fps']*torso_datas[rank]['end']))
+		hands_frames = np.arange(int(hands_data['fps']*hands_datas[rank]['start']),int(hands_data['fps']*hands_datas[rank]['end']))
+		legs_frames = np.arange(int(legs_data['fps']*legs_datas[rank]['start']),int(legs_data['fps']*legs_datas[rank]['end']))
+		frames = min([len(torso_frames),len(hands_frames),len(legs_frames)])
 
 		motion_data_rots = {} 
 		motion_data_trans = {} 
 
-		motion_data_rots["torso"], motion_data_trans["torso"] = get_rots_trans(torso_data, frames)
-		motion_data_rots["hands"], motion_data_trans["hands"] = get_rots_trans(hands_data, frames)
-		motion_data_rots["legs"], motion_data_trans["legs"] = get_rots_trans(legs_data, frames) 
+		motion_data_rots["torso"], motion_data_trans["torso"] = get_rots_trans(torso_data, torso_frames[:frames])
+		motion_data_rots["hands"], motion_data_trans["hands"] = get_rots_trans(hands_data, hands_frames[:frames])
+		motion_data_rots["legs"], motion_data_trans["legs"] = get_rots_trans(legs_data, legs_frames[:frames])
 
 		compositioned_rots = torch.zeros_like(motion_data_rots["torso"])
 		compositioned_rots[:, torso_joints] = motion_data_rots["torso"][:, torso_joints]
