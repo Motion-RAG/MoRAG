@@ -12,8 +12,8 @@
 
 [![WACV2025](https://img.shields.io/badge/WACV-2025-9065CA.svg?logo=WACV)](https://wacv2025.thecvf.com/)
 [![arXiv](https://img.shields.io/badge/arXiv-MoRAG-A10717.svg?logo=arXiv)](https://arxiv.org/abs/2409.12140)
-[![License](https://img.shields.io/badge/License-MIT-green.svg)]()
 [![License](https://img.shields.io/badge/youtube-MoRAG-A10717.svg?logo=youtube)](https://www.youtube.com/watch?v=3Qn0WrYFK_0)
+[![License](https://img.shields.io/badge/License-MIT-green.svg)]()
 
   <a href="">
     <img src="./images/Teaser.gif" alt="Teaser" width="100%">
